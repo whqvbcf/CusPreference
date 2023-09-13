@@ -1,0 +1,82 @@
+<resources>
+    <attr name="luxPreferenceStyle" format="string" />
+    <attr name="customColor" format="color" />
+    <declare-styleable name="Preference">
+        <!-- The optional icon for the preference -->
+        <attr name="icon" />
+        <attr name="android:icon" />
+        <!-- The key to store the Preference value. -->
+        <attr name="key" format="string" />
+        <attr name="android:key" />
+        <!-- The title for the Preference in a PreferenceActivity screen. -->
+        <attr name="title" />
+        <attr name="android:title" />
+        <!-- The summary for the Preference in a PreferenceActivity screen. -->
+        <attr name="summary" format="string" />
+        <attr name="android:summary" />
+        <!-- The order for the Preference (lower values are to be ordered first). If this is not
+             specified, the default ordering will be alphabetic. -->
+        <attr name="order" format="integer" />
+        <attr name="android:order" />
+        <!-- When used inside of a modern PreferenceActivity, this declares
+             a new PreferenceFragment to be shown when the user selects this item. -->
+        <attr name="fragment" format="string" />
+        <attr name="android:fragment" />
+        <!-- The layout for the Preference in a PreferenceActivity screen. This should
+             rarely need to be changed, look at widgetLayout instead. -->
+        <attr name="layout" />
+        <attr name="android:layout" />
+<!--        <attr name="android:layout" />-->
+        <!-- The layout for the controllable widget portion of a Preference. This is inflated
+             into the layout for a Preference and should be used more frequently than
+             the layout attribute. For example, a checkbox preference would specify
+             a custom layout (consisting of just the CheckBox) here. -->
+        <attr name="widgetLayout" format="reference" />
+        <attr name="android:widgetLayout" />
+        <!-- Whether the Preference is enabled. -->
+        <attr name="enabled" format="boolean" />
+        <attr name="android:enabled" />
+        <!-- Whether the Preference is selectable. -->
+        <attr name="selectable" format="boolean" />
+        <attr name="android:selectable" />
+        <!-- The key of another Preference that this Preference will depend on.  If the other
+             Preference is not set or is off, this Preference will be disabled. -->
+        <attr name="dependency" format="string" />
+        <attr name="android:dependency" />
+        <!-- Whether the Preference stores its value to the shared preferences. -->
+        <attr name="persistent" format="boolean" />
+        <attr name="android:persistent" />
+        <!-- The default value for the preference, which will be set either if persistence
+             is off or persistence is on and the preference is not found in the persistent
+             storage.  -->
+        <attr name="defaultValue" format="string|boolean|integer|reference|float" />
+        <attr name="android:defaultValue" />
+        <!-- Whether the view of this Preference should be disabled when
+             this Preference is disabled. -->
+        <attr name="shouldDisableView" format="boolean" />
+        <attr name="android:shouldDisableView" />
+
+        <!-- Whether the preference allows displaying divider on top -->
+        <attr name="allowDividerAbove" format="boolean" />
+
+        <!-- Whether the preference allows displaying divider below it -->
+        <attr name="allowDividerBelow" format="boolean" />
+
+        <!-- Whether to use single line for the preference title text. By default, preference title
+             will be constrained to one line, so the default value of this attribute is true. -->
+        <attr name="singleLineTitle" format="boolean" />
+        <attr name="android:singleLineTitle" />
+
+        <!-- Whether the space for the preference icon view will be reserved. If set to true, the
+             preference will be offset as if it would have the icon and thus aligned with other
+             preferences having icons. By default, preference icon view visibility will be set to
+             GONE when there is no icon provided, so the default value of this attribute is false.
+             -->
+        <attr name="iconSpaceReserved" format="boolean" />
+        <attr name="android:iconSpaceReserved" />
+
+        <!-- Whether the Preference is visible. By default, this is set to true. -->
+        <attr name="isPreferenceVisible" format="boolean" />
+
+    </declare-styleable>
+</resources>
