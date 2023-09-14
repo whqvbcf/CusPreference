@@ -2,17 +2,21 @@ package com.example.cuspreference.preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
 import com.example.cuspreference.R;
+import com.example.cuspreference.widget.ScrollingTextViewTouchListener;
 
 public class LayoutPreference extends Preference {
     private final View.OnClickListener mClickListener = v -> performClick(v);
@@ -90,6 +94,9 @@ public class LayoutPreference extends Preference {
             parent.removeView(mRootView);
         }
         layout.addView(mRootView);
+        final TextView viewtext = holder.itemView.findViewById(android.R.id.summary);
+        viewtext.setMovementMethod(ScrollingMovementMethod.getInstance());
+        viewtext.setOnTouchListener(new ScrollingTextViewTouchListener());
     }
 
     public <T extends View> T findViewById(int id) {

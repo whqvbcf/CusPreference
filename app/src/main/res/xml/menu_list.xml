@@ -7,15 +7,17 @@
         android:layout="@layout/essay_pref_layout"
         android:selectable="false"
         android:summary="@string/consumer_general_password_setup_details2" />
-    <com.example.cuspreference.preference.LayoutPreference
-        android:key="launch_pattern"
-        app:layout="@layout/passcode_setup_layout"
-        android:order="13"
-        android:selectable="false" />
+
     <com.example.cuspreference.preference.CanEditTextPreference
         android:key="key_seekbar2" />
 
     <SeekBarPreference
         android:key="key_spacing"
         android:title="行间距" />
+
+    <com.example.cuspreference.preference.LayoutPreference
+        android:key="launch_pattern"
+        app:layout="@layout/passcode_setup_layout"
+        android:order="13"
+        android:selectable="false" />
 </PreferenceScreen>
