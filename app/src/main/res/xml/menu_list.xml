@@ -2,14 +2,53 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="key0">
+    <com.example.cuspreference.preference.MyPreferenceCategory android:title="other"
+        android:summary="summmmmmmmm rrr112">
+        <PreferenceScreen
+            android:background="#ff6665"
+            android:key="blog_"
+            android:summary="作者博客地址"
+            android:title="访问博客">
+            <Preference
+                android:key="essay_preference11"
+                android:layout="@layout/essay_pref_layout"
+                android:selectable="false"
+                android:summary="husfashfk" />
+
+            <Preference
+                android:key="essay_preference12"
+                android:layout="@layout/essay_pref_layout"
+                android:selectable="false"
+                android:summary="HUKHKJKHKH" />
+
+        </PreferenceScreen>
+        <Preference
+            android:key="essay_preference1"
+            android:layout="@layout/essay_pref_layout"
+            android:selectable="false"
+            android:summary="1334234354456546456654645" />
+
+        <Preference
+            android:key="essay_preference2"
+            android:layout="@layout/essay_pref_layout"
+            android:selectable="false"
+            android:summary="56734234237ghsdhgsgfjgHHHhkshndfahkdjkfsdh]奥拉夫解封了" />
+
+        <Preference
+            android:key="essay_preference3"
+            android:layout="@layout/essay_pref_layout"
+            android:selectable="false"
+            android:summary="sjgsgjbsgjkshgkhskgajksgsaghah" />
+
+    </com.example.cuspreference.preference.MyPreferenceCategory>
     <Preference
         android:key="essay_preference"
         android:layout="@layout/essay_pref_layout"
         android:selectable="false"
+        android:title="essy"
         android:summary="@string/consumer_general_password_setup_details2" />
 
-    <com.example.cuspreference.preference.CanEditTextPreference
-        android:key="key_seekbar2" />
+    <com.example.cuspreference.preference.CanEditTextPreference android:key="key_seekbar2" />
 
     <SeekBarPreference
         android:key="key_spacing"
@@ -17,7 +56,7 @@
 
     <com.example.cuspreference.preference.LayoutPreference
         android:key="launch_pattern"
-        app:layout="@layout/passcode_setup_layout"
         android:order="13"
-        android:selectable="false" />
+        android:selectable="false"
+        app:layout="@layout/passcode_setup_layout" />
 </PreferenceScreen>
