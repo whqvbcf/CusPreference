@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_options">
+        <item>选项1</item>
+        <item>选项2</item>
+        <item>选项3</item>
+    </string-array>
+
+    <string-array name="list_values">
+        <item>option1</item>
+        <item>option2</item>
+        <item>option3</item>
+    </string-array>
+</resources> 

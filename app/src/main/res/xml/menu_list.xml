@@ -2,8 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="key0">
-    <com.example.cuspreference.preference.MyPreferenceCategory android:title="other"
-        android:summary="summmmmmmmm rrr112">
+    <com.example.cuspreference.CustomListPreference
+        android:defaultValue="option1"
+        android:entries="@array/list_options"
+        android:entryValues="@array/list_values"
+        android:key="custom_list_preference"
+        android:summary="点击选择选项"
+        android:title="自定义列表选择" />
+    <com.example.cuspreference.preference.MyPreferenceCategory
+        android:summary="summmmmmmmm rrr112"
+        android:title="other">
         <PreferenceScreen
             android:background="#ff6665"
             android:key="blog_"
@@ -45,8 +53,8 @@
         android:key="essay_preference"
         android:layout="@layout/essay_pref_layout"
         android:selectable="false"
-        android:title="essy"
-        android:summary="@string/consumer_general_password_setup_details2" />
+        android:summary="@string/consumer_general_password_setup_details2"
+        android:title="essy" />
 
     <com.example.cuspreference.preference.CanEditTextPreference android:key="key_seekbar2" />
 
