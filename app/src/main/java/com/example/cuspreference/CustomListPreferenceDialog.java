@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -51,7 +50,6 @@ public class CustomListPreferenceDialog extends Dialog {
         titleView.setText(preference.getTitle());
 
         ImageButton closeButton = findViewById(R.id.close_button);
-        Button confirmButton = findViewById(R.id.confirm_button);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
 
         // 设置RecyclerView
@@ -64,12 +62,6 @@ public class CustomListPreferenceDialog extends Dialog {
         adapter = new SingleChoiceAdapter(entries, entryValues, selectedValue, value -> {
             selectedValue = value;
             adapter.setSelectedValue(value);
-        });
-        
-        recyclerView.setAdapter(adapter);
-
-        closeButton.setOnClickListener(v -> dismiss());
-        confirmButton.setOnClickListener(v -> {
             if (selectedValue != null) {
                 if (preference.callChangeListener(selectedValue)) {
                     preference.setValue(selectedValue);
@@ -77,5 +69,9 @@ public class CustomListPreferenceDialog extends Dialog {
             }
             dismiss();
         });
+        
+        recyclerView.setAdapter(adapter);
+
+        closeButton.setOnClickListener(v -> dismiss());
     }
 } 
