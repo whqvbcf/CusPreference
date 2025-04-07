@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ItemSpacingDecoration extends RecyclerView.ItemDecoration {
     private final int spacing;
     private final Paint dividerPaint;
-    private static final int EXTRA_SPACING = 30;
+    private static final int EXTRA_SPACING = 8;
+    private static final int DIVIDER_START_MARGIN = 16;
+    private static final int DIVIDER_END_MARGIN = 40;
 
     public ItemSpacingDecoration(int spacing) {
         this.spacing = spacing;
@@ -22,7 +24,13 @@ public class ItemSpacingDecoration extends RecyclerView.ItemDecoration {
         for (int i = 0; i < childCount - 1; i++) {
             View child = parent.getChildAt(i);
             int top = child.getBottom() + spacing / 2;
-            c.drawRect(0, top, parent.getWidth(), top + 1, dividerPaint);
+            c.drawRect(
+                DIVIDER_START_MARGIN, 
+                top, 
+                parent.getWidth() - DIVIDER_END_MARGIN, 
+                top + 1, 
+                dividerPaint
+            );
         }
     }
 
