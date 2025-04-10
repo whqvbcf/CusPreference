@@ -1,6 +1,7 @@
 package com.example.cuspreference;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,8 @@ public class WifiSpinnerAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = createViewFromResource(position, convertView, parent);
+        TextView textView = view.findViewById(R.id.spinner_text);
+        textView.setGravity(Gravity.END | Gravity.CENTER_VERTICAL); // 设置文字靠右并垂直居中
         // 隐藏分割线，因为这是显示在 Spinner 上的视图
         View divider = view.findViewById(R.id.divider);
         divider.setVisibility(View.GONE);
@@ -38,6 +41,11 @@ public class WifiSpinnerAdapter extends ArrayAdapter<String> {
         } else {
             divider.setVisibility(View.VISIBLE);
         }
+
+        // 设置顶部和底部的 padding
+        int topPadding = (position == 0) ? 16 : 0;
+        int bottomPadding = (position == getCount() - 1) ? 16 : 0;
+        view.setPadding(view.getPaddingLeft(), topPadding, view.getPaddingRight(), bottomPadding);
 
         return view;
     }

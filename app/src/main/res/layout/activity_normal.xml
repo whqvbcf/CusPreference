@@ -19,12 +19,37 @@
             android:text="Hello World!afdsjjjjjjjjahsfksjahdfkshdakfhskadf水电费卡夫卡的看法考试的解封了看手机的雷锋精神龙卷风世纪东方快乐圣诞节风口浪尖收到了开房间老师讲的风口浪尖时代峰峻老师的2jjjjjjjjjjjjjjjjjjjjjjjjjjjjjk00000000000000000000000000000lAAAAADGJKDG" />
     </ScrollView>
 
-    <Spinner
-        android:id="@+id/custom_spinner"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:spinnerMode="dropdown"
-        android:background="@drawable/spinner_background"
-        style="@style/CustomSpinnerStyle" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全性"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical" />
+
+        <com.example.cuspreference.WifiSpinner
+            android:id="@+id/custom_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/spinner_background"
+            style="@style/CustomSpinnerStyle"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            android:textAlignment="viewEnd"
+            android:paddingEnd="8dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/arrow_down_float"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
 
 </LinearLayout>
