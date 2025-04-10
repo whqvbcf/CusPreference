@@ -1,0 +1,58 @@
+package com.example.cuspreference;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class WifiSpinnerAdapter extends ArrayAdapter<String> {
+
+    private int selectedPosition = -1;
+
+    public WifiSpinnerAdapter(Context context, int resource, String[] objects) {
+        super(context, resource, objects);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View view = createViewFromResource(position, convertView, parent);
+        // 隐藏分割线，因为这是显示在 Spinner 上的视图
+        View divider = view.findViewById(R.id.divider);
+        divider.setVisibility(View.GONE);
+        return view;
+    }
+
+    @Override
+    public View getDropDownView(int position, View convertView, ViewGroup parent) {
+        View view = createViewFromResource(position, convertView, parent);
+        ImageView checkMark = view.findViewById(R.id.check_mark);
+        checkMark.setVisibility(position == selectedPosition ? View.VISIBLE : View.GONE);
+
+        // 动态设置分割线
+        View divider = view.findViewById(R.id.divider);
+        if (position == getCount() - 1) {
+            divider.setVisibility(View.GONE); // 最后一项不显示分割线
+        } else {
+            divider.setVisibility(View.VISIBLE);
+        }
+
+        return view;
+    }
+
+    private View createViewFromResource(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.spinner_item, parent, false);
+        }
+        TextView textView = convertView.findViewById(R.id.spinner_text);
+        textView.setText(getItem(position));
+        return convertView;
+    }
+
+    public void setSelection(int position) {
+        selectedPosition = position;
+        notifyDataSetChanged();
+    }
+}

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".NormalActivity">
 
     <ScrollView
@@ -18,5 +19,12 @@
             android:text="Hello World!afdsjjjjjjjjahsfksjahdfkshdakfhskadf水电费卡夫卡的看法考试的解封了看手机的雷锋精神龙卷风世纪东方快乐圣诞节风口浪尖收到了开房间老师讲的风口浪尖时代峰峻老师的2jjjjjjjjjjjjjjjjjjjjjjjjjjjjjk00000000000000000000000000000lAAAAADGJKDG" />
     </ScrollView>
 
+    <Spinner
+        android:id="@+id/custom_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/spinner_background"
+        style="@style/CustomSpinnerStyle" />
 
 </LinearLayout>

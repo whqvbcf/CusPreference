@@ -1,0 +1,7 @@
+<resources>
+    <!-- Existing styles -->
+    
+    <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:popupBackground">@drawable/spinner_background</item>
+    </style>
+</resources> 
