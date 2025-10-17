@@ -94,9 +94,9 @@ public class LayoutPreference extends Preference {
             parent.removeView(mRootView);
         }
         layout.addView(mRootView);
-        final TextView viewtext = holder.itemView.findViewById(android.R.id.summary);
-        viewtext.setMovementMethod(ScrollingMovementMethod.getInstance());
-        viewtext.setOnTouchListener(new ScrollingTextViewTouchListener());
+//        final TextView viewtext = holder.itemView.findViewById(android.R.id.summary);
+//        viewtext.setMovementMethod(ScrollingMovementMethod.getInstance());
+//        viewtext.setOnTouchListener(new ScrollingTextViewTouchListener());
     }
 
     public <T extends View> T findViewById(int id) {

@@ -44,8 +44,8 @@
 
         <Preference
             android:key="essay_preference3"
-            android:layout="@layout/essay_pref_layout"
-            android:selectable="false"
+            android:layout="@layout/master_consumer_preference_head"
+            android:title="14124234423"
             android:summary="sjgsgjbsgjkshgkhskgajksgsaghah" />
 
     </com.example.cuspreference.preference.MyPreferenceCategory>
@@ -57,14 +57,19 @@
         android:title="essy" />
 
     <com.example.cuspreference.preference.CanEditTextPreference android:key="key_seekbar2" />
+    <com.example.cuspreference.preference.LayoutPreference
+        android:key="launch_part"
+        android:order="13"
+        android:selectable="false"
+        app:layout="@layout/storage_path_layout" />
 
     <SeekBarPreference
         android:key="key_spacing"
         android:title="行间距" />
 
-    <com.example.cuspreference.preference.LayoutPreference
-        android:key="launch_pattern"
-        android:order="13"
-        android:selectable="false"
-        app:layout="@layout/passcode_setup_layout" />
+<!--    <com.example.cuspreference.preference.LayoutPreference-->
+<!--        android:key="launch_pattern"-->
+<!--        android:order="13"-->
+<!--        android:selectable="false"-->
+<!--        app:layout="@layout/passcode_setup_layout" />-->
 </PreferenceScreen>
